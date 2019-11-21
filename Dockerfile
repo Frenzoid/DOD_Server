@@ -44,4 +44,4 @@ RUN ./steamcmd.sh +login anonymous +force_install_dir ${GAMEDIR} +app_update ${G
 WORKDIR ${GAMEDIR}
 RUN chmod +x ./DragonsServer.sh
 
-ENTRYPORT ["/bin/bash", "-c", "./DragonsServer.sh]
+ENTRYPOINT ["/bin/bash", "-c", "./DragonsServer.sh]
