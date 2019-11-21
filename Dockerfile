@@ -16,14 +16,14 @@ RUN apt-get update && \
         lib32gcc1 \
         lib32tinfo5 \
       	libncurses5 \
-        libncurses5 \
-	      libc6 \
-	      libstdc++6 \
-	      lib32z1 \
-	      libcurl3-gnutls \
-	      curl
+ 	libncurses5 \
+	libc6 \
+	libstdc++6 \	
+	lib32z1 \
+	libcurl3-gnutls \
+	curl
 	      
-RUN useradd -m steam && useradd -m steam
+RUN useradd -m steam
 
 USER steam
 RUN mkdir -p /home/steam/dayofdragons_server/  /home/steam/steamcmd/
