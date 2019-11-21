@@ -32,7 +32,7 @@ RUN apt-get clean autoclean
 RUN apt-get autoremove -y
 RUN rm -rf /var/lib/apt/lists/*
 
-RUN /usr/share/steam/steamcmd/steamcmd.sh +login anonymous +force_install_dir /usr/share/steam/dayofdragons_server/ +app_update 1088320 validate +quit
+ENTRYPOINT ["/bin/bash", "-c", "./steamcmd.sh +login anonymous +force_install_dir /usr/share/steam/dayofdragons_server/ +app_update 1088320 validate +quit"]
 RUN chmod +x /usr/share/steam/dayofdragons_server/DragonsServer.sh
 
 ENTRYPOINT ["/bin/bash", "-c", "./DragonsServer.sh]
