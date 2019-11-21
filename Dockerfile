@@ -23,11 +23,11 @@ RUN apt-get update && \
 	libcurl3-gnutls \
 	curl
 	      
-RUN useradd -m steam
-RUN mkdir -p /home/steam/dayofdragons_server/  /home/steam/steamcmd/
-COPY preparesteamcmd.sh /home/steam/steamcmd/preparesteamcmd.sh
-RUN chmod +x /home/steam/preparesteamcmd.sh
-RUN chown steam -R /home/steam/
+RUN ["useradd", "-m", "steam"]
+RUN ["mkdir", "-p", "/home/steam/dayofdragons_server/",  "/home/steam/steamcmd/"]
+COPY preparesteamcmd.sh /home/steam/preparesteamcmd.sh
+RUN ["chmod", "+x", "/home/steam/preparesteamcmd.sh"]
+RUN ["chown", "steam", "-R", "/home/steam/"]
 
 USER steam
 WORKDIR /home/steam/steamcmd/
@@ -39,7 +39,7 @@ RUN apt-get clean autoclean
 RUN apt-get autoremove -y
 RUN rm -rf /var/lib/apt/lists/*
 
-RUN chmod +x /home/steam/dayofdragons_server/DragonsServer.sh
+RUN ["chmod", "+x", "/home/steam/dayofdragons_server/DragonsServer.sh"]
 
 USER steam
 WORKDIR /home/steam/dayofdragons_server/
