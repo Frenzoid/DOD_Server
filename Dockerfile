@@ -29,8 +29,8 @@ RUN mkdir -p /usr/share/steam/dayofdragons_server/  /usr/share/steam/steamcmd/
 WORKDIR /usr/share/steam/steamcmd/
 
 RUN chmod +x ./preparesteamcmd.sh
-RUN /bin/bash -c "./preparesteamcmd.sh"
-RUN /bin/bash -c "./steamcmd.sh +login anonymous +force_install_dir /usr/share/steam/dayofdragons_server/ +app_update 1088320 validate +quit"
+RUN ./preparesteamcmd.sh
+RUN ./steamcmd.sh +login anonymous +force_install_dir /usr/share/steam/dayofdragons_server/ +app_update 1088320 validate +quit
 
 RUN apt-get clean autoclean
 RUN apt-get autoremove -y
