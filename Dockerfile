@@ -28,7 +28,7 @@ RUN apt-get update && \
 RUN mkdir -p /usr/share/steam/dayofdragons_server/  /usr/share/steam/steamcmd/
 WORKDIR /usr/share/steam/steamcmd/
 
-RUN chmod +x preparesteamcmd.sh
+RUN chmod +x ./preparesteamcmd.sh
 RUN ./preparesteamcmd.sh
 RUN ./steamcmd.sh +login anonymous +force_install_dir /usr/share/steam/dayofdragons_server/ +app_update 1088320 validate +quit
 
