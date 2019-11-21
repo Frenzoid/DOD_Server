@@ -27,7 +27,7 @@ RUN apt-get update && \
 		
 RUN mkdir -p /usr/share/steam/dayofdragons_server/  /usr/share/steam/steamcmd/
 WORKDIR /usr/share/steam/steamcmd/
-RUN ./preparesteamcmd.sh
+RUN chmod +x preparesteamcmd.sh && ./preparesteamcmd.sh
 
 RUN apt-get clean autoclean
 RUN apt-get autoremove -y
