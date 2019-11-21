@@ -46,4 +46,5 @@ USER root
 RUN chmod +x /home/steam/dayofdragons_server/DragonsServer.sh && chown steam -R /home/steam/
 
 USER steam
+WORKDIR /home/steam/dayofdragons_server/
 ENTRYPOINT ["/bin/bash", "-c", "./DragonsServer.sh]
