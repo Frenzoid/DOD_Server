@@ -26,7 +26,7 @@ RUN apt-get update && \
 RUN ["useradd", "-m", "steam"]
 RUN ["mkdir", "-p", "/home/steam/dayofdragons_server/",  "/home/steam/steamcmd/"]
 COPY preparesteamcmd.sh /home/steam/steamcmd/preparesteamcmd.sh
-RUN ["chmod", "+x", "/home/steam/steamcmd/preparesteamcmd.sh"]
+RUN ["chmod", "775", "/home/steam/steamcmd/preparesteamcmd.sh"]
 RUN ["chown", "steam", "-R", "/home/steam/"]
 
 USER steam
