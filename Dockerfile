@@ -1,7 +1,7 @@
 FROM ubuntu
 MAINTAINER Frenzoid <frenzoid@protonmail.com>
 
-ENV VOL /root/steam/
+ENV VOL /usr/share/steam/
 ENV GAMEPORT 9000
 
 VOLUME ${VOL}
@@ -23,15 +23,16 @@ RUN apt-get update && \
 	      libcurl3-gnutls \
 	      curl
 		
-RUN mkdir -p /root/steam/dayofdragons_server/  /root/steam/steamcmd/
-WORKDIR /root/steam/steamcmd/
+RUN mkdir -p /usr/share/steam/dayofdragons_server/  /usr/share/steam/steamcmd/
+WORKDIR /usr/share/steam/steamcmd/
 RUN curl -s 'https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz' | tar -vxz
+RUN chmod +x /usr/share/steam/steamcmd/steamcmd.sh
 
 RUN apt-get clean autoclean
 RUN apt-get autoremove -y
 RUN rm -rf /var/lib/apt/lists/*
 
-RUN /root/steam/steamcmd/steamcmd.sh +login anonymous +force_install_dir /root/steam/dayofdragons_server/ +app_update 1088320 validate +quit
-RUN chmod +x /root/steam/dayofdragons_server/DragonsServer.sh
+RUN /usr/share/steam/steamcmd/steamcmd.sh +login anonymous +force_install_dir /usr/share/steam/dayofdragons_server/ +app_update 1088320 validate +quit
+RUN chmod +x /usr/share/steam/dayofdragons_server/DragonsServer.sh
 
 ENTRYPOINT ["/bin/bash", "-c", "./DragonsServer.sh]
