@@ -26,6 +26,7 @@ RUN apt-get update && \
 RUN mkdir -p /usr/share/steam/dayofdragons_server/  /usr/share/steam/steamcmd/
 WORKDIR /usr/share/steam/steamcmd/
 RUN curl -s 'https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz' | tar -vxz
+RUN ls -l
 RUN chmod +x /usr/share/steam/steamcmd/steamcmd.sh
 
 RUN apt-get clean autoclean
