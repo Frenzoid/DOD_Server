@@ -2,7 +2,6 @@ FROM ubuntu
 MAINTAINER Frenzoid <frenzoid@protonmail.com>
 
 ENV VOL /root/steam/
-ENV GAMEID 1088320
 ENV GAMEPORT 9000
 
 VOLUME ${VOL}
@@ -33,7 +32,7 @@ RUN apt-get autoremove -y
 RUN rm -rf /var/lib/apt/lists/*
 
 WORKDIR /root/steam/steamcmd/
-RUN ./steamcmd.sh +login anonymous +force_install_dir $GAMEDIR +app_update $GAMEID validate +quit
+RUN ./steamcmd.sh +login anonymous +force_install_dir /root/steam/dayofdragons_server/ +app_update 1088320 validate +quit
 
 WORKDIR /root/steam/dayofdragons_server/
 RUN chmod +x ./DragonsServer.sh
