@@ -24,13 +24,9 @@ RUN apt-get update && \
 	curl
 	      
 RUN useradd -m steam
-
-USER steam
 RUN mkdir -p /home/steam/dayofdragons_server/  /home/steam/steamcmd/
 COPY preparesteamcmd.sh /home/steam/steamcmd/preparesteamcmd.sh
-
-USER root
-RUN chmod +x /home/steam/preparesteamcmd.sh && chown steam /home/steam/preparesteamcmd.sh
+RUN chmod +x /home/steam/preparesteamcmd.sh && chown steam -R /home/steam/
 
 USER steam
 WORKDIR /home/steam/steamcmd/
@@ -42,8 +38,7 @@ RUN apt-get clean autoclean
 RUN apt-get autoremove -y
 RUN rm -rf /var/lib/apt/lists/*
 
-USER root
-RUN chmod +x /home/steam/dayofdragons_server/DragonsServer.sh && chown steam -R /home/steam/
+RUN chmod +x /home/steam/dayofdragons_server/DragonsServer.sh
 
 USER steam
 WORKDIR /home/steam/dayofdragons_server/
