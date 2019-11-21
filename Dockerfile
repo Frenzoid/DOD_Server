@@ -1,9 +1,9 @@
 FROM ubuntu
 MAINTAINER Frenzoid <frenzoid@protonmail.com>
 
-ENV VOL /root/steam
-ENV STEAMCMDDIR ${VOL}/steamcmd
-ENV GAMEDIR ${VOL}/dayofdragons_server
+ENV VOL /root/steam/
+ENV STEAMCMDDIR ${VOL}/steamcmd/
+ENV GAMEDIR ${VOL}/dayofdragons_server/
 ENV GAMEID 1088320
 ENV GAMEPORT 9000
 
@@ -26,18 +26,18 @@ RUN apt-get update && \
 	      libcurl3-gnutls \
 	      curl
 		
-RUN mkdir -p ${STEAMCMDDIR} ${GAMEDIR} \
-	&& cd ${STEAMCMDDIR} \
+RUN mkdir -p $STEAMCMDDIR $GAMEDIR \
+	&& cd $STEAMCMDDIR \
 	&& curl -s 'https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz' | tar -vxz
 
 RUN apt-get clean autoclean
 RUN apt-get autoremove -y
 RUN rm -rf /var/lib/apt/lists/*
 
-RUN chmod +x ${STEAMCMDDIR}/start.sh
+RUN chmod +x $STEAMCMDDIRstart.sh
 
 WORKDIR ${STEAMCMDDIR}
-RUN ./steamcmd.sh +login anonymous +force_install_dir ${GAMEDIR} +app_update ${GAMEID} validate +quit
+RUN ./steamcmd.sh +login anonymous +force_install_dir $GAMEDIR +app_update $GAMEID validate +quit
 
 WORKDIR ${GAMEDIR}
 RUN chmod +x ./DragonsServer.sh
