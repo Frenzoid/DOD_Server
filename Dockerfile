@@ -11,8 +11,6 @@ VOLUME ${VOL}
 
 EXPOSE ${GAMEPORT}
 
-COPY start.sh /root/steam/steamcmd/start.sh
-
 RUN apt-get update 
 RUN apt-get update && \
     apt-get upgrade -y && \
