@@ -2,13 +2,16 @@ FROM ubuntu:18.04
 MAINTAINER Frenzoid <frenzoid@protonmail.com>
 
 ENV VOLROOT /home/steamsrv/
-ENV VOWORLD /home/steamsrv/dayofdragons_server/
+ENV VOLSCMD /home/steamsrv/steamcmd/
+ENV VOLSDOD /home/steamsrv/dayofdragons_server/
 
 ENV GAMEPORT 9000
 ENV UPDATE true
 
-VOLUME ${VOWORLD}
 VOLUME ${VOLROOT}
+VOLUME ${VOLSCMD}
+VOLUME ${VOLSDOD}
+
 EXPOSE ${GAMEPORT}
 
 RUN dpkg --add-architecture i386
