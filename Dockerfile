@@ -26,7 +26,7 @@ RUN apt-get update && \
 RUN ["mkdir", "-p", "/steam/dayofdragons_server/",  "/steam/steamcmd/"]
 COPY preparesteamcmd.sh /steam/steamcmd/preparesteamcmd.sh
 
-WORKDIR /home/steam/steamcmd/
+WORKDIR /steam/steamcmd/
 
 RUN ./preparesteamcmd.sh
 RUN ./steamcmd.sh +login anonymous +force_install_dir /steam/dayofdragons_server/ +app_update 1088320 validate +quit
@@ -37,5 +37,5 @@ RUN rm -rf /var/lib/apt/lists/*
 
 RUN ["chmod", "+x", "/steam/dayofdragons_server/DragonsServer.sh"]
 
-WORKDIR /home/steam/dayofdragons_server/
+WORKDIR /steam/dayofdragons_server/
 ENTRYPOINT ["/bin/bash", "-c", "./DragonsServer.sh]
