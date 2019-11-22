@@ -1,7 +1,7 @@
 FROM ubuntu:18.04
 MAINTAINER Frenzoid <frenzoid@protonmail.com>
 
-ENV VOL /home/steamsrv/
+ENV VOL /root/steamsrv/
 ENV GAMEPORT 9000
 
 VOLUME ${VOL}
@@ -21,29 +21,23 @@ RUN apt-get update                      &&      \
 	lib32z1					\
 	libcurl3-gnutls:i386
 	      
-RUN useradd                             \
-        -d /home/steamsrv               \
-        -m                              \
-        -s /bin/bash                    \
-        steamsrv
 
-USER steamsrv
-RUN mkdir -p /home/steamsrv/steamcmd  /home/steamsrv/dayofdragons_server/ && \
-    cd /home/steamsrv/steamcmd && \
+RUN mkdir -p /root/steamsrv/steamcmd  /root/steamsrv/dayofdragons_server/ && \
+    cd /root/steamsrv/steamcmd && \
     curl -s http://media.steampowered.com/installer/steamcmd_linux.tar.gz | tar -vxz && \
-    mkdir -p /home/steamsrv/.steam/sdk32 && \
-    ln -s /home/steamsrv/steamcmd/linux32/steamclient.so /home/steamsrv/.steam/sdk32/steamclient.so
+    mkdir -p /root/steamsrv/.steam/sdk32 && \
+    ln -s /root/steamsrv/steamcmd/linux32/steamclient.so /root/steamsrv/.steam/sdk32/steamclient.so
 	
 
-WORKDIR /home/steamsrv
+WORKDIR /root/steamsrv
 
-RUN /home/steamsrv/steamcmd/steamcmd.sh +login anonymous +force_install_dir /home/steamsrv/dayofdragons_server/ +app_update 1088320 validate +quit
+RUN /root/steamsrv/steamcmd/steamcmd.sh +login anonymous +force_install_dir /root/steamsrv/dayofdragons_server/ +app_update 1088320 validate +quit
 
 RUN apt-get clean autoclean
 RUN apt-get autoremove -y
 RUN rm -rf /var/lib/apt/lists/*
 
-RUN ["chmod", "+x", "/home/steamsrv/dayofdragons_server/DragonsServer.sh"]
+RUN ["chmod", "+x", "/root/steamsrv/dayofdragons_server/DragonsServer.sh"]
 
-WORKDIR /home/steamsrv/dayofdragons_server/
+WORKDIR /root/steamsrv/dayofdragons_server/
 ENTRYPOINT ["/bin/bash", "-c", "./DragonsServer.sh]
