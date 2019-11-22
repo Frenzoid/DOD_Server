@@ -16,12 +16,10 @@ RUN apt-get update && \
         lib32gcc1 \
         lib32tinfo5 \
       	libncurses5 \
- 	libncurses5 \
 	libc6 \
 	libstdc++6 \	
 	lib32z1 \
-	libcurl3-gnutls \
-	curl
+	libcurl3-gnutls
 	      
 RUN ["mkdir", "-p", "/steam/dayofdragons_server/",  "/steam/steamcmd/"]
 WORKDIR /steam/steamcmd/
