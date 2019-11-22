@@ -7,7 +7,7 @@ ENV VOWORLD /home/steamsrv/dayofdragons_server/
 ENV GAMEPORT 9000
 ENV UPDATE true
 
-VOLUME ${VOL}
+VOLUME ${VOWORLD}
 VOLUME ${VOLROOT}
 EXPOSE ${GAMEPORT}
 
