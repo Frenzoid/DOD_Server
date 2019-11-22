@@ -32,7 +32,7 @@ RUN ["chown", "steam", "-R", "/home/steam/"]
 USER steam
 WORKDIR /home/steam/steamcmd/
 
-RUN ["bash", "./preparesteamcmd.sh"]
+RUN ./preparesteamcmd.sh
 RUN ./steamcmd.sh +login anonymous +force_install_dir /home/steam/dayofdragons_server/ +app_update 1088320 validate +quit
 
 RUN apt-get clean autoclean
