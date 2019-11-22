@@ -24,11 +24,12 @@ RUN apt-get update && \
 	curl
 	      
 RUN ["mkdir", "-p", "/steam/dayofdragons_server/",  "/steam/steamcmd/"]
-COPY preparesteamcmd.sh /steam/steamcmd/preparesteamcmd.sh
-
 WORKDIR /steam/steamcmd/
 
-RUN ./preparesteamcmd.sh
+ADD https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz /steam/steamcmd/
+
+RUN tar -vxz ./steamcmd_linux.tar.gz
+RUN chmod 775 ./steamcmd.sh
 RUN ./steamcmd.sh +login anonymous +force_install_dir /steam/dayofdragons_server/ +app_update 1088320 validate +quit
 
 RUN apt-get clean autoclean
