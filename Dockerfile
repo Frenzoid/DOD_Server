@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM ubuntu:18.04
 MAINTAINER Frenzoid <frenzoid@protonmail.com>
 
 ENV VOL /home/steamsrv/
@@ -7,18 +7,19 @@ ENV GAMEPORT 9000
 VOLUME ${VOL}
 EXPOSE ${GAMEPORT}
 
-RUN apt-get update 
-RUN apt-get update && \
-    apt-get upgrade -y && \
-    apt-get install -y \
-        curl \
-        lib32gcc1 \
-        lib32tinfo5 \
-      	libncurses5 \
-	libc6 \
-	libstdc++6 \	
-	lib32z1 \
-	libcurl3-gnutls
+RUN dpkg --add-architecture i386
+RUN apt-get update                      &&      \
+    apt-get upgrade -y                  &&      \
+    apt-get install -y                          \
+        curl                                    \
+        lib32gcc1				\
+	lib32tinfo5				\
+	libncurses5				\
+	libncurses5:i386			\
+	libc6:i386				\
+	libstdc++6:i386				\
+	lib32z1					\
+	libcurl3-gnutls:i386
 	      
 RUN useradd                             \
         -d /home/steamsrv               \
