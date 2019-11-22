@@ -29,11 +29,6 @@ RUN useradd                             \
         -s /bin/bash                    \
         steamsrv
 
-RUN mkdir -p /scripts
-ADD InstallAppID /scripts/InstallAppID
-ADD run_srcds_server /scripts/run_srcds_server
-ADD StartServer /scripts/StartServer
-
 USER steamsrv
 # Download and extract SteamCMD
 RUN mkdir -p /home/steamsrv/steamcmd            &&\
