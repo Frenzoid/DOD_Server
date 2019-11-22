@@ -37,6 +37,6 @@ RUN mkdir -p /home/steamsrv/steamcmd            &&\
     mkdir -p /home/steamsrv/.steam/sdk32		&&\
     ln -s /home/steamsrv/steamcmd/linux32/steamclient.so /home/steamsrv/.steam/sdk32/steamclient.so
 	
-COPY entry-point.sh /home/steamsrv/entry-point.sh
+COPY entry-point.sh /home/steamsrv/steamcmd/entry-point.sh
 
 ENTRYPOINT ["/home/steamsrv/steamcmd/entry-point.sh"]
