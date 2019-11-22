@@ -27,10 +27,10 @@ RUN useradd                             \
         steamsrv
 
 USER steamsrv
-RUN mkdir -p /home/steamsrv/steamcmd  /home/steamsrv/dayofdragons_server/          &&\
-    cd /home/steamsrv/steamcmd                  &&\
-    curl -s http://media.steampowered.com/installer/steamcmd_linux.tar.gz | tar -vxz &&\
-    mkdir -p /home/steamsrv/.steam/sdk32	&&\
+RUN mkdir -p /home/steamsrv/steamcmd  /home/steamsrv/dayofdragons_server/ && \
+    cd /home/steamsrv/steamcmd && \
+    curl -s http://media.steampowered.com/installer/steamcmd_linux.tar.gz | tar -vxz && \
+    mkdir -p /home/steamsrv/.steam/sdk32 && \
     ln -s /home/steamsrv/steamcmd/linux32/steamclient.so /home/steamsrv/.steam/sdk32/steamclient.so
 	
 
