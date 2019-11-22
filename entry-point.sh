@@ -1,5 +1,4 @@
-
-#! /bin/bash
+#!/bin/bash
 
 if [ $UPDATE == true || $UPDATE == "true" || $UPDATE == 1 ]
   then
@@ -8,4 +7,3 @@ if [ $UPDATE == true || $UPDATE == "true" || $UPDATE == 1 ]
 fi
 
 /home/steamsrv/dayofdragons_server/DragonsServer.sh
-
