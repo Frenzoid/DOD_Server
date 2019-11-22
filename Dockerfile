@@ -1,11 +1,14 @@
 FROM ubuntu:18.04
 MAINTAINER Frenzoid <frenzoid@protonmail.com>
 
-ENV VOL /root/steamsrv/
+ENV VOLROOT /home/steamsrv/
+ENV VOWORLD /home/steamsrv/dayofdragons_server/
+
 ENV GAMEPORT 9000
 ENV UPDATE true
 
 VOLUME ${VOL}
+VOLUME ${VOLROOT}
 EXPOSE ${GAMEPORT}
 
 RUN dpkg --add-architecture i386
