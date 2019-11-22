@@ -28,7 +28,7 @@ WORKDIR /steam/steamcmd/
 
 ADD https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz /steam/steamcmd/
 
-RUN tar -vxz ./steamcmd_linux.tar.gz
+RUN tar -vxz ./steamcmd_linux.tar.gz -C /steam/steamcmd/
 RUN chmod 775 ./steamcmd.sh
 RUN ./steamcmd.sh +login anonymous +force_install_dir /steam/dayofdragons_server/ +app_update 1088320 validate +quit
 
