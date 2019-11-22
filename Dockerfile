@@ -1,5 +1,7 @@
 FROM ubuntu:18.04
-MAINTAINER Frenzoid <frenzoid@protonmail.com>
+
+LABEL maintainer frenzoid
+LABEL emailmaintainer <frenzoid@protonmail.com>
 
 ENV VOLROOT /home/steamsrv/
 ENV VOLSCMD /home/steamsrv/steamcmd/
