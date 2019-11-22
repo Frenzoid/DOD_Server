@@ -1,7 +1,7 @@
 FROM ubuntu
 MAINTAINER Frenzoid <frenzoid@protonmail.com>
 
-ENV VOL /home/steam/
+ENV VOL /steam/
 ENV GAMEPORT 9000
 
 VOLUME ${VOL}
@@ -23,24 +23,19 @@ RUN apt-get update && \
 	libcurl3-gnutls \
 	curl
 	      
-RUN ["useradd", "-m", "steam"]
-RUN ["mkdir", "-p", "/home/steam/dayofdragons_server/",  "/home/steam/steamcmd/"]
-COPY preparesteamcmd.sh /home/steam/steamcmd/preparesteamcmd.sh
-RUN ["chmod", "775", "/home/steam/steamcmd/preparesteamcmd.sh"]
-RUN ["chown", "steam", "-R", "/home/steam/"]
+RUN ["mkdir", "-p", "/steam/dayofdragons_server/",  "/steam/steamcmd/"]
+COPY preparesteamcmd.sh /steam/steamcmd/preparesteamcmd.sh
 
-USER steam
 WORKDIR /home/steam/steamcmd/
 
 RUN ./preparesteamcmd.sh
-RUN ./steamcmd.sh +login anonymous +force_install_dir /home/steam/dayofdragons_server/ +app_update 1088320 validate +quit
+RUN ./steamcmd.sh +login anonymous +force_install_dir /steam/dayofdragons_server/ +app_update 1088320 validate +quit
 
 RUN apt-get clean autoclean
 RUN apt-get autoremove -y
 RUN rm -rf /var/lib/apt/lists/*
 
-RUN ["chmod", "+x", "/home/steam/dayofdragons_server/DragonsServer.sh"]
+RUN ["chmod", "+x", "/steam/dayofdragons_server/DragonsServer.sh"]
 
-USER steam
 WORKDIR /home/steam/dayofdragons_server/
 ENTRYPOINT ["/bin/bash", "-c", "./DragonsServer.sh]
