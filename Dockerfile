@@ -22,11 +22,10 @@ RUN apt-get update && \
 	libcurl3-gnutls
 	      
 RUN ["mkdir", "-p", "/steam/dayofdragons_server/",  "/steam/steamcmd/"]
-WORKDIR /steam/steamcmd/
+WORKDIR /steam/
 
 RUN curl -s 'https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz' | tar -vxz -C /steam/steamcmd/
-RUN chmod 775 ./steamcmd.sh
-RUN ./steamcmd.sh +login anonymous +force_install_dir /steam/dayofdragons_server/ +app_update 1088320 validate +quit
+RUN /steam/steamcmd/steamcmd.sh +login anonymous +force_install_dir /steam/dayofdragons_server/ +app_update 1088320 validate +quit
 
 RUN apt-get clean autoclean
 RUN apt-get autoremove -y
