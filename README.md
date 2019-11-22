@@ -1,6 +1,6 @@
 # Day of Dragons Docker container.
 - This dockerfile will allow you to create an encapsuled docker container that runs a DoD game server.
-- This image can also be pulled from the docker-hub.
+- This image can also be pulled from the [Docker-hub](https://hub.docker.com/repository/docker/xenium/dayofdragons/).
 
 ## Env vars:
 - ```EULA```: (STRING) Env variable to accept the EULA of this software, to do so, just set it to "accept" . Default: unset.
