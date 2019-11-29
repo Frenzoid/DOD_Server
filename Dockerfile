@@ -25,7 +25,9 @@ RUN apt-get update  	    &&	\
 	libc6:i386		\
 	libstdc++6:i386		\
 	lib32z1			\
-	libcurl3-gnutls:i386
+	libcurl3-gnutls:i386 \
+	locale-gen en_US \
+	locale-gen en_US.UTF-8
 								
 
 RUN useradd                             \

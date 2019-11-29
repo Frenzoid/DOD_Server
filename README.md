@@ -27,6 +27,9 @@
 
 - On a web pannel, with Portainer: Just make sure to set the proper variables before creating the container.
 
+## Other info:
+- You can check the official server / client updates on the ```OFFICIALUPDATES.md``` file, or on the official discord.
+
 ### Links:
 - Depots: https://steamdb.info/app/1088320/depots/
 - Game: https://store.steampowered.com/app/1088090/Day_of_Dragons/
