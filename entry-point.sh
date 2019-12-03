@@ -12,6 +12,7 @@ if [[ $EULA == "accept" || $EULA == "ACCEPT" || $EULA == "true" || $EULA == "TRU
   fi
 
   # Updates the Game.ini file.
+  cp /home/steamsrv/predodconfig/Engine.ini /home/steamsrv/dayofdragons_server/Dragons/Saved/Config/LinuxServer/Engine.ini 
   cp /home/steamsrv/predodconfig/Game.ini /home/steamsrv/dayofdragons_server/Dragons/Saved/Config/LinuxServer/Game.ini
   sed -i 's/steamAdminId/$ADMINSTEAMID/g' /home/steamsrv/dayofdragons_server/Dragons/Saved/Config/LinuxServer/Game.ini
   sed -i 's/maxPlayersValue/$MAXPLAYERS/g' /home/steamsrv/dayofdragons_server/Dragons/Saved/Config/LinuxServer/Game.ini
