@@ -9,7 +9,7 @@ Example: /adult InGameName#1234
 |G|Group Leader (User)|
 
 |Parameters|Description|Example|
-|---|---|
+|-----|-----|-----|
 |PID|Player ID, player name followed of the last 4 digits of their Steam ID|InGameName#1234|
 
 |Command|Parameter|Role|Description|
