@@ -8,6 +8,7 @@ ENV VOLSCMD /home/steamsrv/steamcmd/
 ENV VOLSDOD /home/steamsrv/dayofdragons_server/
 
 ENV GAMEPORT 7777
+ENV STEAMPORT 27016
 ENV UPDATE true
 ENV WHITELIST false
 ENV MAXPLAYERS 200
