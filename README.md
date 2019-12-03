@@ -37,7 +37,7 @@
 ## Hosting multiple servers on same IP/machine
 Day of Dragons uses Unreal port 7777, and Steam Server Query Port 27016 by default. Additional servers hosted on the same IP will need their own installation folder and then you will need to change the Steam Query Port in the Engine.ini file.
 
-1) Browse to Dragons\Saved\Config\PlatformServer 
+1) Browse to Dragons\Saved\Config\LinuxServer 
 
 2) Edit file Engine.ini
 
