@@ -9,11 +9,16 @@
 - ```GAMEPORT```: (NUMBER) Env variable to change the exposed port of your server. Default: 7777.
 - ```SERVERPARAMS```: (STRING) Env variable to pass parameters to the DragonsServer script. Default: Empty.
 - ```STEAMPARAMS```: (STRING) Env variable to pass parameters to the SteamCMD on update / install of the server. Default: Empty.
+- ```ADMINSTEAMID```: (STRING) Env variable thats specifies who is the server admin via steamID, set this to get admin privileges. Default: My id :p.
+- ```MAXPLAYERS```: (STRING) Env variable that specifies the Max player slots for the server.
+- ```WHITELIST```: (BOOLEAN) Env variable that enables / disables whitelist mode. Default: false (disabled).
+- ```AUTOSAVESECONDS```: (STRING) Env variable that sets the automatic server save in seconds. Default 300 (Save each 5 minutes).
 
 ## Paths (to bind volumes):
 - ```/home/steamsrv/```: Root folder.
 - ```/home/steamsrv/steamcmd/```: Steam Console folder.
 - ```/home/steamsrv/dayofdragons_server/```: DoD Server folder.
+- ```/home/steamsrv/dayofdragons_server/Dragons/Saved/Config/LinuxServer/Game.ini```: DoD server config file, edit this to add more admins, or whitelists.
 
 ## How Build a local Image (In case you dont have internet to pull the image from Docker-hub):
 - On a terminal with Docker, run: ```sudo docker build -t dod:latest ./```
