@@ -20,7 +20,7 @@ if [[ $EULA == "accept" || $EULA == "ACCEPT" || $EULA == "true" || $EULA == "TRU
 
   # Launches the DoD server.
   chmod 775 /home/steamsrv/dayofdragons_server/DragonsServer.sh
-  /home/steamsrv/dayofdragons_server/DragonsServer.sh $SERVERPARAMS
+  /home/steamsrv/dayofdragons_server/DragonsServer.sh -$SERVERNAME $SERVERPARAMS
 
   else
 
