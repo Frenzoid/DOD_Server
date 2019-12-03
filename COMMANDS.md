@@ -38,6 +38,7 @@ Example: /adult InGameName#1234
 |/group|-----|U|Creates a group|
 |/leave|-----|U|Leave a group|
 |/list|-----|G|Check group PID|
+|/invite|PID|G|Invite player to group|
 |/disband|-----|G|Disbands the group|
 |/transfer|-----|G|Transfer leadership of the group|
 |/kick|-----|G|Kicks player off the group|
