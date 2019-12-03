@@ -6,7 +6,7 @@ Example: /adult InGameName#1234
 |-----|-----|
 |A|Admin|
 |U|User|
-|G|Group Leader (User)|
+|G|Group Leader (User that issued the `/group` command)|
 
 |Parameters|Description|Example|
 |-----|-----|-----|
