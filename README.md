@@ -8,8 +8,8 @@
 - ```UPDATE```: (BOOLEAN) Env variable that triggers the update / initial install of the server. Default: true.
 - ```STEAMPORT```: (NUMBER) Env variable to change the exposed steam query port. Default: 27016 (Do NOT change).
 - ```GAMEPORT```: (NUMBER) Env variable to change the exposed port of your server. Default: 7777 (Do NOT change).
-- ```SERVERPARAMS```: (STRING) Env variable to pass parameters to the DragonsServer script. Default: Empty.
-- ```SERVERNAME```: (STRING) Env variable that sets the servername on launch, example: ```log```: Enables the log window.
+- ```SERVERPARAMS```: (STRING) Env variable to pass parameters to the DragonsServer script. Default: Empty. example: ```log```: Enables the log window.
+- ```SERVERNAME```: (STRING) Env variable that sets the servername on launch.
 - ```STEAMPARAMS```: (STRING) Env variable to pass parameters to the SteamCMD on update / install of the server. Default: Empty.
 - ```ADMINSTEAMID```: (STRING) Env variable thats specifies who is the server admin via steamID, set this to get admin privileges. Default: My id :p.
 - ```MAXPLAYERS```: (STRING) Env variable that specifies the Max player slots for the server.
