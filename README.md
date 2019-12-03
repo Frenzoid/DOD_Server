@@ -6,8 +6,8 @@
 ## Env vars:
 - ```EULA```: (STRING) Env variable to accept the EULA of this software, to do so, just set it to "accept" . Default: unset.
 - ```UPDATE```: (BOOLEAN) Env variable that triggers the update / initial install of the server. Default: true.
-- ```STEAMPORT```: (NUMBER) Env variable to change the exposed steam query port. Default: 27016 (leave it as it is).
-- ```GAMEPORT```: (NUMBER) Env variable to change the exposed port of your server. Default: 7777 (leave it as it is).
+- ```STEAMPORT```: (NUMBER) Env variable to change the exposed steam query port. Default: 27016 (Do NOT change).
+- ```GAMEPORT```: (NUMBER) Env variable to change the exposed port of your server. Default: 7777 (Do NOT change).
 - ```SERVERPARAMS```: (STRING) Env variable to pass parameters to the DragonsServer script. Default: Empty.
 - ```SERVERNAME```: (STRING) Env variable that sets the servername on launch, example: ```log```: Enables the log window.
 - ```STEAMPARAMS```: (STRING) Env variable to pass parameters to the SteamCMD on update / install of the server. Default: Empty.
