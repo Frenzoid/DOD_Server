@@ -30,7 +30,9 @@ RUN apt-get update  	    &&	\
 	libstdc++6:i386		\
 	lib32z1			\
 	libcurl3-gnutls:i386 \
-	locale-gen en_US \
+	sed
+	
+RUN locale-gen en_US \
 	locale-gen en_US.UTF-8
 								
 
