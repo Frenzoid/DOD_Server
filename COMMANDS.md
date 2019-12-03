@@ -1,11 +1,14 @@
 ```Commands sheet
-Roles: A (Admin), U (User), G (User Group Leader).
 Parameters:
 PID: Player ID, player name followed of the last 4 digits of their Steam ID, Example: “InGameName#1234”.
 Syntax: “command” “parameter”.
 Example: /adult InGameName#1234
 ```
-
+|Abreviaion|Role|
+|-----|-----|
+|A|Admin|
+|U|User|
+|G|Group Leader (User)|
 
 |Command|Parameter|Role|Description|
 |-------|---------|----|-----------|
