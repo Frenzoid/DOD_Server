@@ -39,17 +39,14 @@ Day of Dragons uses Unreal port 7777, and Steam Server Query Port 27016 by defau
 
 1) Browse to Dragons\Saved\Config\PlatformServer 
 
-2) Create file Engine.ini
+2) Edit file Engine.ini
 
-Paste this:
 ```MARKDOWN
 [OnlineSubsystemSteam]
 GameServerQueryPort=27016
 ```
 
-3) Save
-
-For each additional server, change port number, ex:
+3) For each additional server, change port number, ex:
 GameServerQueryPort=27017
 GameServerQueryPort=27018
 GameServerQueryPort=27019
