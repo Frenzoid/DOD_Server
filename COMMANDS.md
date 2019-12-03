@@ -22,7 +22,8 @@ Example: /adult InGameName#1234
 |/port|PID|A|Teleports a player to you|
 |/goto|PID|A|Teleports you to a player
 |/kill|PID|A|Kills a player|
-|/hero|-----|A|Makes you immune to all damage|
+|/hamster|-----|A|Enales god mode.|
+|/superhino|-----|A|Disables god mode.|
 |/growself|-----|A|Grows yourselfs|
 |/healself|-----|A|Heals yourself|
 |/killself|-----|A|Kills yourself|
