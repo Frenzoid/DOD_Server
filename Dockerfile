@@ -50,5 +50,6 @@ RUN mkdir -p /home/steamsrv/steamcmd /home/steamsrv/predodconfig/ \
 	
 COPY entry-point.sh /home/steamsrv/steamcmd/entry-point.sh
 COPY Game.ini /home/steamsrv/predodconfig/Game.ini
+COPY Engine.ini /home/steamsrv/predodconfig/Engine.ini
 
 ENTRYPOINT ["/home/steamsrv/steamcmd/entry-point.sh"]
