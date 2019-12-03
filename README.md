@@ -34,6 +34,26 @@
 
 - On a web pannel, with Portainer: Just make sure to set the proper variables before creating the container.
 
+## Hosting multiple servers on same IP/machine
+Day of Dragons uses Unreal port 7777, and Steam Server Query Port 27016 by default. Additional servers hosted on the same IP will need their own installation folder and then you will need to change the Steam Query Port in the Engine.ini file.
+
+1) Browse to Dragons\Saved\Config\PlatformServer 
+
+2) Create file Engine.ini
+
+Paste this:
+```MARKDOWN
+[OnlineSubsystemSteam]
+GameServerQueryPort=27016
+```
+
+3) Save
+
+For each additional server, change port number, ex:
+GameServerQueryPort=27017
+GameServerQueryPort=27018
+GameServerQueryPort=27019
+
 ## Other info:
 - You can check the official server / client updates on the [OFFICIALUPDATES.md](https://github.com/Frenzoid/DayofDragons/blob/master/OFFICIALUPDATES.md) file, or on the official discord.
 - You can check the server commands on the [COMMANDS.md](https://github.com/Frenzoid/DayofDragons/blob/master/COMMANDS.md) file.
