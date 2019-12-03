@@ -3,7 +3,8 @@ Roles: A (Admin), U (User), G (User Group Leader).
 Parameters:
 PID: Player ID, player name followed of the last 4 digits of their Steam ID, Example: “InGameName#1234”.
 Syntax: “command” “parameter”.
-Example: /adult InGameName#1234```
+Example: /adult InGameName#1234
+```
 
 
 |Command|Parameter|Role|Description|
