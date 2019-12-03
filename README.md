@@ -29,7 +29,7 @@
 
 ## Other info:
 - You can check the official server / client updates on the ```OFFICIALUPDATES.md``` file, or on the official discord.
-- You can check the server commands on the ```COMMANDS.md``` file.
+- You can check the server commands on the (COMMANDS.md)[https://github.com/Frenzoid/DayofDragons/blob/master/COMMANDS.md] file.
 
 ### Links:
 - Depots: https://steamdb.info/app/1088320/depots/
