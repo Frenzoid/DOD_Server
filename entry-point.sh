@@ -33,3 +33,4 @@ if [[ $EULA == "accept" || $EULA == "ACCEPT" || $EULA == "true" || $EULA == "TRU
     # If EULA was not accepted, show a message, and close the container.
     echo "EULA was not accepted!, current value: $EULA";
     exit 1;
+fi
