@@ -12,7 +12,7 @@ if [[ $EULA == "accept" || $EULA == "ACCEPT" || $EULA == "true" || $EULA == "TRU
       chmod 775 /home/steamsrv/dayofdragons_server/Dragons/Binaries/Linux/DragonsServer-Linux-Shipping
   fi
 
-  # Checks if the server config needs to be updated.
+  # Checks if the server config needs to be updated. (CURRENTLY NOT APPLICABLE)
   if [[ $UPDATECONFIG == true || $UPDATECONFIG == "true" || $UPDATECONFIG == 1 ]]
     then 
       # Updates the Game.ini file.
