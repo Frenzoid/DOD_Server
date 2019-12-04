@@ -41,28 +41,35 @@
 ## Configuration.
 By default, the game will generate an empty config file on `/home/steamsrv/dayofdragons_server/Dragons/Saved/Config/LinuxServer/Game.ini`, you can modify this file to change the server's config and restart it to apply them, if you are not fond with how Unreal servers work, you can find a template of this file, explainning each field on `/home/steamsrv/predodconfig/Game.ini`, or check this:
 
-```;This config variable allows users to set server max players. Values are currently hardcoded set to 2 min and 250 max. If users do not define the max player count in Game.ini, the server defaults to 100.Please note, we have not yet stress tested our servers for max capacity!
-iServerMaxPlayers=200
+```[/Game/Dev/Libraries/Classes/Runtime/DragonsGameInstance.DragonsGameInstance_C]
+
+;This config variable allows users to set server max players. Values are currently hardcoded set to 2 min and 250 max. If users do not define the max player count in Game.ini, the server defaults to 100. Please note, we have not yet stress tested our servers for max capacity!
+iServerMaxPlayers=maxPlayersValue
 ;range is 2-250
+
 ;This array config variable allows users to define who are admins. This must be set before the server is started. Add additional entries below the first.
-sServerAdmins=Steam64ID
+sServerAdmins=steamAdminId
 ;ServerAdmins=Steam64ID
 ;ServerAdmins=Steam64ID
 ;etc.
+
 ;This blacklist array config variable allows users to ban players by their Steam ID. Replace Steam64ID with the actual Steam ID of the banned player.
 ;ServerBanList=Steam64ID
 ;ServerBanList=Steam64ID
 ;ServerBanList=Steam64ID
 ;etc.
+
 ;Change this value to True if the server uses a whitelist
 bServerUseJoinList=whiteListBoolean
+
 ;This whitelist array config variable allows users to prevent any player from joining their server unless their Steam ID is on this whitelist. Replace Steam64ID with the actual Steam ID of the allowed player. bServerUseJoinList=true must be set to enable the whitelist.
 ;ServerJoinList=Steam64ID
 ;ServerJoinList=Steam64ID
 ;ServerJoinList=Steam64ID
 ;etc.
+
 ;This variable determines the time between server autosaves in seconds, defaults to 300 seconds (5 minutes)
-iAutoSaveInterval=300
+iAutoSaveInterval=autoSaveTimerS
 ```
 
 * Lines that start with `;` are comments, (configuration that the game will ignore).
