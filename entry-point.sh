@@ -16,7 +16,6 @@ if [[ $EULA == "accept" || $EULA == "ACCEPT" || $EULA == "true" || $EULA == "TRU
   if [[ $UPDATECONFIG == true || $UPDATECONFIG == "true" || $UPDATECONFIG == 1 ]]
     then 
       # Updates the Game.ini file.
-      ls /home/steamsrv/dayofdragons_server/Dragons/Saved/Config/LinuxServer/
       mkdir -p /home/steamsrv/dayofdragons_server/Dragons/Saved/Config/LinuxServer/
       cp /home/steamsrv/predodconfig/Game.ini /home/steamsrv/dayofdragons_server/Dragons/Saved/Config/LinuxServer/Game.ini
       sed -i "s/steamAdminId/$ADMINSTEAMID/g" /home/steamsrv/dayofdragons_server/Dragons/Saved/Config/LinuxServer/Game.ini
