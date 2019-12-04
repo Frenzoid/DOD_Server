@@ -13,7 +13,7 @@
 - ```/home/steamsrv/```: Root folder.
 - ```/home/steamsrv/steamcmd/```: Steam Console folder.
 - ```/home/steamsrv/dayofdragons_server/```: DoD Server folder.
-- ```/home/steamsrv/dayofdragons_server/Dragons/Saved/Config/LinuxServer/```: Folder that stores all the DoD server configuration.
+- ```/home/steamsrv/dayofdragons_server/Dragons/Saved/Config/LinuxServer/```: Folder that stores all the DoD server configuration (see the section "Server Configuration" below).
 
 ## How Build a local Image (In case you dont have internet to pull the image from Docker-hub):
 - On a terminal with Docker, run: ```sudo docker build -t dod:latest ./```
