@@ -10,7 +10,7 @@
 - ```UPDATECONFIG```: (BOOLEAN) Env variable that syncs the config of the server with the config env vars values (done on container restart). Default: true.
 - ```STEAMPORT```: (NUMBER) Env variable to change the exposed steam query port. Default: 27016 (Do NOT change).
 - ```GAMEPORT```: (NUMBER) Env variable to change the exposed port of your server. Default: 7777 (Do NOT change).
-- ```SERVERPARAMS```: (STRING) Env variable to pass parameters to the DragonsServer script. Default: Empty. example: ```log```: Enables the log window.
+- ```SERVERPARAMS```: (STRING) Env variable to pass parameters to the DragonsServer script. Default: Empty. example: ```-log```: Enables the log window.
 ### Configuration values.
 - ```SERVERNAME```: (STRING) Env variable that sets the servername on launch.
 - ```STEAMPARAMS```: (STRING) Env variable to pass parameters to the SteamCMD on update / install of the server. Default: Empty.
