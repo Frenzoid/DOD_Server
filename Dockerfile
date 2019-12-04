@@ -44,7 +44,8 @@ RUN apt-get update  	    &&	\
 	libstdc++6:i386		\
 	lib32z1			\
 	libcurl3-gnutls:i386 \
-	sed
+	sed \
+	nano
 								
 
 RUN useradd                             \
