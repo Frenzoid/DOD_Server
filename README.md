@@ -47,7 +47,7 @@ sServerAdmins=Steam64ID
 ;etc.
 
 ;Change this value to True if the server uses a whitelist
-bServerUseJoinList=whiteListBoolean
+bServerUseJoinList=false
 
 ;This whitelist array config variable allows users to prevent any player from joining their server unless their Steam ID is on this whitelist. Replace Steam64ID with the actual Steam ID of the allowed player. bServerUseJoinList=true must be set to enable the whitelist.
 ;ServerJoinList=Steam64ID
