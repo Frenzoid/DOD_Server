@@ -13,6 +13,7 @@ if [[ $EULA == "accept" || $EULA == "ACCEPT" || $EULA == "true" || $EULA == "TRU
   # Checks if the server config needs to be updated. (CURRENTLY NOT APPLICABLE)
   if [[ $UPDATECONFIG == true || $UPDATECONFIG == "true" || $UPDATECONFIG == 1 ]]
     then 
+      echo "[[[[ UPDATING GAME.INI & ENGINE.INI ]]]]
       # Updates the Game.ini file.
       mkdir -p /home/steamsrv/dayofdragons_server/Dragons/Saved/Config/LinuxServer/
       cp /home/steamsrv/predodconfig/Game.ini /home/steamsrv/dayofdragons_server/Dragons/Saved/Config/LinuxServer/Game.ini
