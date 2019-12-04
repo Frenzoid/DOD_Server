@@ -65,7 +65,7 @@ iAutoSaveInterval=300
 * If you can't find the file `Game.ini` on the folder, modify the tempalte, copy it, and restart the container.
 (MAKE SURE THE `UPDATE` VARIABLE IS `FALSE` OR IT WILL OVERWRITTE IT).
 
-## Hosting multiple servers on same IP/machine
+## Hosting multiple servers on the same Host.
 Day of Dragons uses Unreal port 7777, and Steam Server Query Port 27016 by default. Additional servers hosted on the same IP will need their own installation folder and then you will need to change the Steam Query Port in the Engine.ini file.
 
 1) Browse to /home/steamsrv/predodconfig/
