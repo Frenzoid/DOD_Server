@@ -4,19 +4,16 @@
 - This image can also be pulled from the [Docker-hub](https://hub.docker.com/repository/docker/xenium/dayofdragons/).
 
 ## Env vars:
-### Downloading, Installation and Configuration values.
 - ```EULA```: (STRING) Env variable to accept the EULA of this software, to do so, just set it to "accept" . Default: unset.
 - ```UPDATEGAME```: (BOOLEAN) Env variable that triggers the update / initial install of the server (done on container restart). Default: true.
-- ```STEAMPORT```: (NUMBER) Env variable to change the exposed steam query port. Default: 27016 (Do NOT change).
-- ```GAMEPORT```: (NUMBER) Env variable to change the exposed port of your server. Default: 7777 (Do NOT change).
 - ```SERVERPARAMS```: (STRING) Env variable to pass parameters to the DragonsServer script. Default: Empty. example: ```-log```: Enables the log window.
 - ```SERVERNAME```: (STRING) Env variable that sets the servername on launch.
 
-## Paths (to bind volumes):
+## Paths and folders (to bind volumes):
 - ```/home/steamsrv/```: Root folder.
 - ```/home/steamsrv/steamcmd/```: Steam Console folder.
 - ```/home/steamsrv/dayofdragons_server/```: DoD Server folder.
-- ```/home/steamsrv/dayofdragons_server/Dragons/Saved/Config/LinuxServer/Game.ini```: DoD server config file, edit this to add more admins, enable whitelists, etc (see the Configuration" section).
+- ```/home/steamsrv/dayofdragons_server/Dragons/Saved/Config/LinuxServer/```: Folder that stores all the DoD server configuration.
 
 ## How Build a local Image (In case you dont have internet to pull the image from Docker-hub):
 - On a terminal with Docker, run: ```sudo docker build -t dod:latest ./```
@@ -28,9 +25,9 @@
   - -e env variable assignation.
   - --name name of the container.
 
-- On a web pannel, with Portainer: Just make sure to set the proper variables before creating the container.
+- On a web pannel, with Portainer: Just make sure to set the proper env variables and exposing all the ports before creating the container.
 
-## Configuration.
+## Server Configuration.
 By default, the game will generate an empty config file on `/home/steamsrv/dayofdragons_server/Dragons/Saved/Config/LinuxServer/Game.ini`, you can modify this file to change the server's config and restart it to apply them, if you are not fond with how Unreal servers work, you can find a template of this file, explainning each field on `/home/steamsrv/predodconfig/Game.ini`, or check this:
 
 ```;This config variable allows users to set server max players. Values are currently hardcoded set to 2 min and 250 max. If users do not define the max player count in Game.ini, the server defaults to 100.Please note, we have not yet stress tested our servers for max capacity!
@@ -98,3 +95,5 @@ GameServerQueryPort=27019
 - Depots: https://steamdb.info/app/1088320/depots/
 - Game: https://store.steampowered.com/app/1088090/Day_of_Dragons/
 - Official webpage: https://dayofdragons.com/#order
+- Offical Linux Install Manual: https://cdn.discordapp.com/attachments/651429908270153728/651452087485464578/HowToInstallLinuxServer.rtf
+- Official Windows Install Manual: https://cdn.discordapp.com/attachments/651429908270153728/651452032661717018/HowToInstallWindowsServer.rtf
