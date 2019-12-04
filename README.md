@@ -28,7 +28,7 @@
 - On a web pannel, with Portainer: Just make sure to set the proper env variables and exposing all the ports before creating the container.
 
 ## Server Configuration.
-By default, the game will generate an empty config file on `/home/steamsrv/dayofdragons_server/Dragons/Saved/Config/LinuxServer/Game.ini`, you can modify this file to change the server's config and restart it to apply them, if you are not fond with how Unreal servers work, you can find a template of this file, explainning each field on `/home/steamsrv/predodconfig/Game.ini`, or check this:
+By default, the game will generate an empty config file on `/home/steamsrv/dayofdragons_server/Dragons/Saved/Config/LinuxServer/Game.ini`, you have to copy and edit the file bellow to change the server's config, and restart it to apply them, if you are not fond with how Unreal servers work, you can find a template of this file, explainning each field on `/home/steamsrv/predodconfig/Game.ini`, or check this:
 
 ```;This config variable allows users to set server max players. Values are currently hardcoded set to 2 min and 250 max. If users do not define the max player count in Game.ini, the server defaults to 100.Please note, we have not yet stress tested our servers for max capacity!
 iServerMaxPlayers=200
