@@ -4,11 +4,14 @@
 - This image can also be pulled from the [Docker-hub](https://hub.docker.com/repository/docker/xenium/dayofdragons/).
 
 ## Env vars:
+### Downloading and Installation values.
 - ```EULA```: (STRING) Env variable to accept the EULA of this software, to do so, just set it to "accept" . Default: unset.
-- ```UPDATE```: (BOOLEAN) Env variable that triggers the update / initial install of the server. Default: true.
+- ```UPDATEGAME```: (BOOLEAN) Env variable that triggers the update / initial install of the server. Default: true.
+- ```UPDATECONFIG```: (BOOLEAN) Env variable that updates the config of the server with the config env vars value. Default: true.
 - ```STEAMPORT```: (NUMBER) Env variable to change the exposed steam query port. Default: 27016 (Do NOT change).
 - ```GAMEPORT```: (NUMBER) Env variable to change the exposed port of your server. Default: 7777 (Do NOT change).
 - ```SERVERPARAMS```: (STRING) Env variable to pass parameters to the DragonsServer script. Default: Empty. example: ```log```: Enables the log window.
+### Configuration values.
 - ```SERVERNAME```: (STRING) Env variable that sets the servername on launch.
 - ```STEAMPARAMS```: (STRING) Env variable to pass parameters to the SteamCMD on update / install of the server. Default: Empty.
 - ```ADMINSTEAMID```: (STRING) Env variable thats specifies who is the server admin via steamID, set this to get admin privileges. Default: My id :p.
