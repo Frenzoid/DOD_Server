@@ -6,6 +6,7 @@ LABEL emailmaintainer frenzoid@protonmail.com
 ENV VOLROOT /home/steamsrv/
 ENV VOLSCMD /home/steamsrv/steamcmd/
 ENV VOLSDOD /home/steamsrv/dayofdragons_server/
+ENV VOLCONF /home/steamsrv/dayofdragons_server/Dragons/Saved/Config/LinuxServer/
 
 ENV GAMEPORT1 7777
 ENV GAMEPORT2 7778
