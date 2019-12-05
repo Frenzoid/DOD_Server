@@ -24,6 +24,8 @@ ENV ADMINSTEAMID STEAM_0:1:45646277
 ENV UPDATECONFIG true
 ENV SERVERNAME "Docker Powered DoD server!"
 
+ENV LAUNCHSERVER "/home/steamsrv/dayofdragons_server/Dragons/Binaries/Linux/DragonsServer-Linux-Shipping -SteamServerName=$SERVERNAME $SERVERPARAMS"
+
 EXPOSE ${WEBPORT}/tcp
 EXPOSE ${SSLPORT}/tcp
 EXPOSE ${GAMEPORT1}/udp
