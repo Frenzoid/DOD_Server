@@ -50,7 +50,7 @@ iServerMaxPlayers=maxPlayersValue
 ;range is 2-250
 
 ;This array config variable allows users to define who are admins. This must be set before the server is started. Add additional entries below the first.
-sServerAdmins=steamAdminId
+sServerAdmins=Steam64ID
 ;ServerAdmins=Steam64ID
 ;ServerAdmins=Steam64ID
 ;etc.
@@ -62,7 +62,7 @@ sServerAdmins=steamAdminId
 ;etc.
 
 ;Change this value to True if the server uses a whitelist
-bServerUseJoinList=whiteListBoolean
+bServerUseJoinList=false
 
 ;This whitelist array config variable allows users to prevent any player from joining their server unless their Steam ID is on this whitelist. Replace Steam64ID with the actual Steam ID of the allowed player. bServerUseJoinList=true must be set to enable the whitelist.
 ;ServerJoinList=Steam64ID
@@ -71,7 +71,7 @@ bServerUseJoinList=whiteListBoolean
 ;etc.
 
 ;This variable determines the time between server autosaves in seconds, defaults to 300 seconds (5 minutes)
-iAutoSaveInterval=autoSaveTimerS
+iAutoSaveInterval=300
 ```
 
 * Lines that start with `;` are comments, (configuration that the game will ignore).
@@ -82,8 +82,7 @@ iAutoSaveInterval=autoSaveTimerS
 ## Hosting multiple servers on same IP/machine
 Day of Dragons uses Unreal port 7777, and Steam Server Query Port 27016 by default. Additional servers hosted on the same IP will need their own installation folder and then you will need to change the Steam Query Port in the Engine.ini file.
 
-1) Browse to Dragons\Saved\Config\LinuxServer 
-1) Browse to /home/steamsrv/predodconfig/
+1) Browse to /home/steamsrv/predodconfig/Dragons/Saved/Config/LinuxServer 
 
 2) Edit file Engine.ini
 
