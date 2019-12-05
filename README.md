@@ -82,7 +82,7 @@ iAutoSaveInterval=300
 ## Hosting multiple servers on same IP/machine
 Day of Dragons uses Unreal port 7777, and Steam Server Query Port 27016 by default. Additional servers hosted on the same IP will need their own installation folder and then you will need to change the Steam Query Port in the Engine.ini file.
 
-1) Browse to /home/steamsrv/predodconfig/Dragons/Saved/Config/LinuxServer 
+1) Browse to /home/steamsrv/predodconfig/
 
 2) Edit file Engine.ini
 
@@ -97,7 +97,7 @@ GameServerQueryPort=27019
 
 4) Once finished, paste the file to: `/home/steamsrv/dayofdragons_server/Dragons/Saved/Config/LinuxServer/Engine.ini`
 
-5) Restart the container.
+5) Restart the container and run `$LAUNCHSERVER`.
 (MAKE SURE THE `UPDATE` VARIABLE IS `FALSE` OR IT WILL OVERWRITTE IT).
 
 ## Other info:
