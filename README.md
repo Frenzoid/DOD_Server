@@ -1,4 +1,5 @@
-# Dragons over Docker! A Day of Dragons dedicated server Docker container.
+# Dragons over Docker! 
+# A Day of Dragons dedicated server Docker container.
 ![dod logo](https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1088320/438449dd45a85b9285a9c2be55a7fcef5a3d3a4d.jpg)
 - This dockerfile will allow you to create an encapsuled docker container that runs a DoD game server.
 - This image can also be pulled from the [Docker-hub](https://hub.docker.com/repository/docker/xenium/dayofdragons/).
@@ -40,7 +41,7 @@
 - On a web pannel, with Portainer: Just make sure to set the proper variables before creating the container, join via remote console and type `$LAUNCHSERVER`.
 
 ## Configuration.
-By default, the game will generate an empty config file on `/home/steamsrv/dayofdragons_server/Dragons/Saved/Config/LinuxServer/Game.ini`, the container will automatically replace the config's fields with the env vars and paste it to `/home/steamsrv/predodconfig/Game.ini`, still, if you want to edit the file, to add more admins, etc.. just go to `/home/steamsrv/dayofdragons_server/Dragons/Saved/Config/LinuxServer/Game.ini` and edit the file, here's a template:
+By default, the game will generate an empty config file on `/home/steamsrv/dayofdragons_server/Dragons/Saved/Config/LinuxServer/Game.ini`, the container, at start, will automatically replace the config's fields with the env vars and paste it to `/home/steamsrv/predodconfig/Game.ini`, still, if you want to edit the file, to add more admins, etc.. just go to `/home/steamsrv/dayofdragons_server/Dragons/Saved/Config/LinuxServer/Game.ini` and edit the file, here's a template:
 
 ```
 [/Game/Dev/Libraries/Classes/Runtime/DragonsGameInstance.DragonsGameInstance_C]
@@ -75,9 +76,7 @@ iAutoSaveInterval=300
 ```
 
 * Lines that start with `;` are comments, (configuration that the game will ignore).
-
-* If you can't find the file `Game.ini` on the folder, modify the tempalte, copy it, and restart the container.
-(MAKE SURE THE `UPDATECONFIG` VARIABLE IS `FALSE` OR IT WILL OVERWRITTE IT).
+* If you can't find the file `Game.ini` on the folder, modify the tempalte, copy it, and restart the server.
 
 ## Hosting multiple servers on same IP/machine
 Day of Dragons uses Unreal port 7777, and Steam Server Query Port 27016 by default. Additional servers hosted on the same IP will need their own installation folder and then you will need to change the Steam Query Port in the Engine.ini file.
