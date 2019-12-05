@@ -1,3 +1,41 @@
+VERSION 0.7.2.0 Update Now Live
+
+```
+*Server Hosts will want to update to the latest version for EA release.
+
+NEW STUFF
+--Added Day of Dragons Theme to Main Menu
+--Logging out now checks for nearby hostiles before despawning your character, if a non-grouped player is nearby your character will remain in the world for 60 seconds. If no non-grouped players are nearby, you will logout immediately.
+--Added sound fx for plasma shot
+--[EventPlayerDeath] added to server log with timestamp showing both name and steam id of player who died and the name/steam ID of who killed them
+--Partially added server persistence, still work to do, the rest will come in a patch.
+
+CHANGED STUFF
+--Sound Updates
+--UI Updates
+--Dragon Growth Times set back to "normal"
+--Fire dragon/wyvern can now breath fire while running
+--Plasma can now be fired when running
+--Removed all feeding troughs from game
+
+FIXED STUFF
+--Loading screens should now resize correctly to different DPI scales
+--Fixed Error message screen
+--Fixed Calls always playing 1 call for 3rd parties
+--Fixed eggs sometimes not hatching bug
+--Fixed Adults can now attack after dropping corpses
+--Fixed Babies are no longer stuck in the mouth of a dragon who logs out
+--Misc fixes I forgot to jot down (thank you Dragon Testers)
+--Fixed dropped corpses can never be picked up again
+--Fixed server multithread lockup bug 
+--Fixed admin nametags
+
+BROKEN STUFF
+--Chat box may become unusable after using fire attacks
+--Server persistence is disabled for now
+```
+
+
 VERSION 0.7.1.3
 
 ```
