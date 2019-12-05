@@ -5,6 +5,12 @@ if [[ $EULA == "accept" || $EULA == "ACCEPT" || $EULA == "true" || $EULA == "TRU
   # Check if update is needed (by default this var is set to true, so the initial install triggers)
   if [[ $UPDATEGAME == true || $UPDATEGAME == "true" || $UPDATEGAME == 1 ]]
     then
+      # Delete previous install if there is one.
+      if [ -d "/home/steamsrv/dayofdragons_server/" ]; then
+        rmdir /home/steamsrv/dayofdragons_server/
+      fi
+       
+      # Create a new folder to install thhe dragons server.
       mkdir -p "/home/steamsrv/dayofdragons_server/"
       /home/steamsrv/steamcmd/steamcmd.sh +login anonymous +force_install_dir /home/steamsrv/dayofdragons_server/ +app_update 1088320 validate $STEAMPARAMS +quit
       chmod 775 /home/steamsrv/dayofdragons_server/Dragons/Binaries/Linux/DragonsServer-Linux-Shipping
