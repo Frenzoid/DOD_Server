@@ -1,6 +1,6 @@
 ```Commands sheet
 Syntax: “command” “parameter”.
-Example: /adult InGameName#1234
+Example: /invite InGameName#1234
 ```
 |Abbreviation|Role|
 |-----|-----|
