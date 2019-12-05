@@ -4,7 +4,6 @@
 - This image can also be pulled from the [Docker-hub](https://hub.docker.com/repository/docker/xenium/dayofdragons/).
 
 ## Env vars:
-### Downloading and Installation values.
 ### Downloading, Installation and Configuration values.
 - ```EULA```: (STRING) Env variable to accept the EULA of this software, to do so, just set it to "accept" . Default: unset.
 - ```UPDATEGAME```: (BOOLEAN) Env variable that triggers the update / initial install of the server (done on container restart). Default: true.
@@ -36,8 +35,9 @@
   - -p port specification.
   - -e env variable assignation.
   - --name name of the container.
+  Then, type `$LAUNCHSERVER`.
 
-- On a web pannel, with Portainer: Just make sure to set the proper variables before creating the container.
+- On a web pannel, with Portainer: Just make sure to set the proper variables before creating the container, join via remote console and type `$LAUNCHSERVER`.
 
 ## Configuration.
 By default, the game will generate an empty config file on `/home/steamsrv/dayofdragons_server/Dragons/Saved/Config/LinuxServer/Game.ini`, you can modify this file to change the server's config and restart it to apply them, if you are not fond with how Unreal servers work, you can find a template of this file, explainning each field on `/home/steamsrv/predodconfig/Game.ini`, or check this:
