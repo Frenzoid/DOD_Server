@@ -24,7 +24,7 @@ ENV ADMINSTEAMID STEAM_0:1:45646277
 ENV UPDATECONFIG true
 ENV SERVERNAME 'Docker Powered DoD server!'
 
-ENV LAUNCHSERVER "/home/steamsrv/dayofdragons_server/Dragons/Binaries/Linux/DragonsServer-Linux-Shipping -SteamServerName=$(echo $SERVERNAME) $(echo $SERVERPARAMS)"
+ENV LAUNCHSERVER "/home/steamsrv/launchserver.sh"
 
 EXPOSE ${WEBPORT}/tcp
 EXPOSE ${SSLPORT}/tcp
@@ -68,6 +68,7 @@ RUN mkdir -p /home/steamsrv/steamcmd /home/steamsrv/predodconfig/ && \
     ln -s /home/steamsrv/steamcmd/linux32/steamclient.so /home/steamsrv/.steam/sdk32/steamclient.so
 	
 COPY entry-point.sh /home/steamsrv/steamcmd/entry-point.sh
+COPY launchserver.sh /home/steamsrv/launchserver.sh
 COPY Game.ini /home/steamsrv/predodconfig/Game.ini
 COPY Engine.ini /home/steamsrv/predodconfig/Engine.ini
 
