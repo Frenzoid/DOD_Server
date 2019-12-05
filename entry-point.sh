@@ -13,7 +13,8 @@ if [[ $EULA == "accept" || $EULA == "ACCEPT" || $EULA == "true" || $EULA == "TRU
   # Checks if the server config needs to be updated. (CURRENTLY NOT APPLICABLE)
   if [[ $UPDATECONFIG == true || $UPDATECONFIG == "true" || $UPDATECONFIG == 1 ]]
     then 
-      echo "[[[[ UPDATING GAME.INI & ENGINE.INI ]]]]
+      echo "[[[[ UPDATING GAME.INI & ENGINE.INI ]]]]"
+      
       # Updates the Game.ini file.
       mkdir -p /home/steamsrv/dayofdragons_server/Dragons/Saved/Config/LinuxServer/
       cp /home/steamsrv/predodconfig/Game.ini /home/steamsrv/dayofdragons_server/Dragons/Saved/Config/LinuxServer/Game.ini
@@ -23,7 +24,7 @@ if [[ $EULA == "accept" || $EULA == "ACCEPT" || $EULA == "true" || $EULA == "TRU
       sed -i "s/autoSaveTimerS/$AUTOSAVESECONDS/g" /home/steamsrv/dayofdragons_server/Dragons/Saved/Config/LinuxServer/Game.ini
 
       # Copies the Engine.ini file.
-      cp /home/steamsrv/predodconfig/Engine.ini /home/steamsrv/dayofdragons_server/Dragons/Saved/Config/LinuxServer/Engine.ini 
+      cp /home/steamsrv/predodconfig/Engine.ini /home/steamsrv/dayofdragons_server/Dragons/Saved/Config/LinuxServer/Engine.ini
   fi
 
   # Starts the container persistence mode.
