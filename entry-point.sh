@@ -26,9 +26,13 @@ if [[ $EULA == "accept" || $EULA == "ACCEPT" || $EULA == "true" || $EULA == "TRU
       cp /home/steamsrv/predodconfig/Engine.ini /home/steamsrv/dayofdragons_server/Dragons/Saved/Config/LinuxServer/Engine.ini 
   fi
 
-  # Launches the DoD server.
-  /home/steamsrv/dayofdragons_server/Dragons/Binaries/Linux/DragonsServer-Linux-Shipping -SteamServerName=$SERVERNAME $SERVERPARAMS
-
+  # Exports the launch command the DoD server.
+  export LAUNCHSERVER="/home/steamsrv/dayofdragons_server/Dragons/Binaries/Linux/DragonsServer-Linux-Shipping -SteamServerName=$SERVERNAME $SERVERPARAMS"
+  
+  # Starts the container persistence mode.
+  while true;
+  do; done;
+  
   else
 
     # If EULA was not accepted, show a message, and close the container.
