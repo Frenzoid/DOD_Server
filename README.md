@@ -103,3 +103,12 @@ GameServerQueryPort=27019
 ## Other info:
 - You can check the official server / client updates on the [OFFICIALUPDATES.md](https://github.com/Frenzoid/DayofDragons/blob/master/OFFICIALUPDATES.md) file, or on the official discord.
 - You can check the server commands on the [COMMANDS.md](https://github.com/Frenzoid/DayofDragons/blob/master/COMMANDS.md) file.
+- Website: https://dayofdragons.com/
+- YouTube: https://www.youtube.com/BeawesomeGames
+- Twitter: https://twitter.com/beawesome_games
+- Instagram: https://www.instagram.com/dayofdragonsofficial/
+- Kickstarter: https://www.kickstarter.com/projects/beawesomegames/day-of-dragons
+- Steam Store: https://store.steampowered.com/app/1088090/
+- Steam Community: https://steamcommunity.com/app/1088090
+- Discord: https://discord.gg/dayofdragons
+- Rent a Server: https://nodecraft.com/r/dayofdragons
