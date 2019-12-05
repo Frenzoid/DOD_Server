@@ -40,13 +40,13 @@
 - On a web pannel, with Portainer: Just make sure to set the proper variables before creating the container, join via remote console and type `$LAUNCHSERVER`.
 
 ## Configuration.
-By default, the game will generate an empty config file on `/home/steamsrv/dayofdragons_server/Dragons/Saved/Config/LinuxServer/Game.ini`, you can modify this file to change the server's config and restart it to apply them, if you are not fond with how Unreal servers work, you can find a template of this file, explainning each field on `/home/steamsrv/predodconfig/Game.ini`, or check this:
+By default, the game will generate an empty config file on `/home/steamsrv/dayofdragons_server/Dragons/Saved/Config/LinuxServer/Game.ini`, the container will automatically replace the config's fields with the env vars and paste it to `/home/steamsrv/predodconfig/Game.ini`, still, if you want to edit the file, to add more admins, etc.. just go to `/home/steamsrv/dayofdragons_server/Dragons/Saved/Config/LinuxServer/Game.ini` and edit the file, here's a template:
 
 ```
 [/Game/Dev/Libraries/Classes/Runtime/DragonsGameInstance.DragonsGameInstance_C]
 
 ;This config variable allows users to set server max players. Values are currently hardcoded set to 2 min and 250 max. If users do not define the max player count in Game.ini, the server defaults to 100. Please note, we have not yet stress tested our servers for max capacity!
-iServerMaxPlayers=maxPlayersValue
+iServerMaxPlayers=100
 ;range is 2-250
 
 ;This array config variable allows users to define who are admins. This must be set before the server is started. Add additional entries below the first.
@@ -77,7 +77,7 @@ iAutoSaveInterval=300
 * Lines that start with `;` are comments, (configuration that the game will ignore).
 
 * If you can't find the file `Game.ini` on the folder, modify the tempalte, copy it, and restart the container.
-(MAKE SURE THE `UPDATE` VARIABLE IS `FALSE` OR IT WILL OVERWRITTE IT).
+(MAKE SURE THE `UPDATECONFIG` VARIABLE IS `FALSE` OR IT WILL OVERWRITTE IT).
 
 ## Hosting multiple servers on same IP/machine
 Day of Dragons uses Unreal port 7777, and Steam Server Query Port 27016 by default. Additional servers hosted on the same IP will need their own installation folder and then you will need to change the Steam Query Port in the Engine.ini file.
@@ -95,10 +95,8 @@ GameServerQueryPort=27017
 GameServerQueryPort=27018
 GameServerQueryPort=27019
 
-4) Once finished, paste the file to: `/home/steamsrv/dayofdragons_server/Dragons/Saved/Config/LinuxServer/Engine.ini`
-
-5) Restart the container and run `$LAUNCHSERVER`.
-(MAKE SURE THE `UPDATE` VARIABLE IS `FALSE` OR IT WILL OVERWRITTE IT).
+4) Restart the container and run `$LAUNCHSERVER`.
+(MAKE SURE THE `UPDATECONFIG` VARIABLE IS `TRUE` OR CHANGES WILL NOT BE MADE).
 
 ## Other info:
 - You can check the official server / client updates on the [OFFICIALUPDATES.md](https://github.com/Frenzoid/DayofDragons/blob/master/OFFICIALUPDATES.md) file, or on the official discord.
