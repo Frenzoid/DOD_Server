@@ -30,11 +30,9 @@ if [[ $EULA == "accept" || $EULA == "ACCEPT" || $EULA == "true" || $EULA == "TRU
   export LAUNCHSERVER="/home/steamsrv/dayofdragons_server/Dragons/Binaries/Linux/DragonsServer-Linux-Shipping -SteamServerName=$SERVERNAME $SERVERPARAMS"
   
   # Starts the container persistence mode.
-  while true;
-  do; done;
+  while true; do foo; sleep 2; done
   
-  else
-
+else
     # If EULA was not accepted, show a message, and close the container.
     echo "EULA was not accepted!, current value: $EULA";
     exit 1;
