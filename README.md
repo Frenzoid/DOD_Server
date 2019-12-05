@@ -24,7 +24,6 @@
 - ```/home/steamsrv/```: Root folder.
 - ```/home/steamsrv/steamcmd/```: Steam Console folder.
 - ```/home/steamsrv/dayofdragons_server/```: DoD Server folder.
-- ```/home/steamsrv/dayofdragons_server/Dragons/Saved/Config/LinuxServer/Game.ini```: DoD server config file, edit this to add more admins, or whitelists.
 - ```/home/steamsrv/dayofdragons_server/Dragons/Saved/Config/LinuxServer/Game.ini```: DoD server config file, edit this to add more admins, enable whitelists, etc (see the Configuration" section).
 
 ## How Build a local Image (In case you dont have internet to pull the image from Docker-hub):
