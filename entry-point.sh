@@ -28,7 +28,7 @@ if [[ $EULA == "accept" || $EULA == "ACCEPT" || $EULA == "true" || $EULA == "TRU
   fi
 
   # Starts the container persistence mode.
-  while true; do foo; sleep 2; done
+  while true; do; sleep 2; done
   
 else
     # If EULA was not accepted, show a message, and close the container.
