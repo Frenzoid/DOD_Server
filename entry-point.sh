@@ -27,9 +27,9 @@ if [[ $EULA == "accept" || $EULA == "ACCEPT" || $EULA == "true" || $EULA == "TRU
       cp /home/steamsrv/predodconfig/Engine.ini /home/steamsrv/dayofdragons_server/Dragons/Saved/Config/LinuxServer/Engine.ini
   fi
 
-  # Starts the container persistence mode.
-  while true; do; sleep 2; done
-  
+  # Starts the container console.
+  /bin/bash
+
 else
     # If EULA was not accepted, show a message, and close the container.
     echo "EULA was not accepted!, current value: $EULA";
