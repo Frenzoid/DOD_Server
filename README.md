@@ -35,6 +35,7 @@
   - -p port specification.
   - -e env variable assignation.
   - --name name of the container.
+  
   Then, type `$LAUNCHSERVER`.
 
 - On a web pannel, with Portainer: Just make sure to set the proper variables before creating the container, join via remote console and type `$LAUNCHSERVER`.
