@@ -43,7 +43,8 @@
 ## Configuration.
 By default, the game will generate an empty config file on `/home/steamsrv/dayofdragons_server/Dragons/Saved/Config/LinuxServer/Game.ini`, you can modify this file to change the server's config and restart it to apply them, if you are not fond with how Unreal servers work, you can find a template of this file, explainning each field on `/home/steamsrv/predodconfig/Game.ini`, or check this:
 
-```[/Game/Dev/Libraries/Classes/Runtime/DragonsGameInstance.DragonsGameInstance_C]
+```
+[/Game/Dev/Libraries/Classes/Runtime/DragonsGameInstance.DragonsGameInstance_C]
 
 ;This config variable allows users to set server max players. Values are currently hardcoded set to 2 min and 250 max. If users do not define the max player count in Game.ini, the server defaults to 100. Please note, we have not yet stress tested our servers for max capacity!
 iServerMaxPlayers=maxPlayersValue
