@@ -22,7 +22,7 @@ ENV MAXPLAYERS 200
 ENV AUTOSAVESECONDS 300
 ENV ADMINSTEAMID STEAM_0:1:45646277
 ENV UPDATECONFIG true
-ENV SERVERNAME 'Docker Powered DoD server!'
+ENV SERVERNAME "Docker Powered DoD server!"
 
 ENV LAUNCHSERVER "/home/steamsrv/launchserver.sh"
 ENV STOPSERVER "kill -9 $(ps -aux | grep dragons | cut -d ' ' -f4 | head -n1)"
