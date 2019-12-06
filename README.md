@@ -41,7 +41,11 @@
 - On a web pannel, with Portainer: Just make sure to set the proper variables before creating the container, join via remote console and type `$LAUNCHSERVER`.
 
 ## Configuration.
-By default, the game will generate an empty config file on `/home/steamsrv/dayofdragons_server/Dragons/Saved/Config/LinuxServer/Game.ini`, the container, at start, will automatically replace the config's fields with the env vars and paste it to `/home/steamsrv/predodconfig/Game.ini`, still, if you want to edit the file, to add more admins, etc.. just go to `/home/steamsrv/dayofdragons_server/Dragons/Saved/Config/LinuxServer/Game.ini` and edit the file, here's a template:
+By default, the game will generate an empty config file on `/home/steamsrv/dayofdragons_server/Dragons/Saved/Config/LinuxServer/Game.ini`, the container, at start, will automatically replace the config's fields with the env vars and paste it to `/home/steamsrv/predodconfig/Game.ini`, still, if you want to edit the file, to add more admins, etc.. just do the next steps:
+
+1) Stop the server, type `$STOPSERVER`.
+
+2) Go to `/home/steamsrv/dayofdragons_server/Dragons/Saved/Config/LinuxServer/Game.ini` and edit the file, here's a template:
 
 ```
 [/Game/Dev/Libraries/Classes/Runtime/DragonsGameInstance.DragonsGameInstance_C]
@@ -78,6 +82,8 @@ iAutoSaveInterval=300
 * Lines that start with `;` are comments, (configuration that the game will ignore).
 * If you can't find the file `Game.ini` on the folder, modify the tempalte, copy it, and restart the server.
 
+3) Start the server, type `$LAUNCHSERVER`,
+
 ## Hosting multiple servers on same IP/machine
 Day of Dragons uses Unreal port 7777, and Steam Server Query Port 27016 by default. Additional servers hosted on the same IP will need their own installation folder and then you will need to change the Steam Query Port in the Engine.ini file.
 
@@ -94,7 +100,7 @@ GameServerQueryPort=27017
 GameServerQueryPort=27018
 GameServerQueryPort=27019
 
-4) Restart the container and run `$LAUNCHSERVER`.
+4) Restart the container, and run `$LAUNCHSERVER`.
 (MAKE SURE THE `UPDATECONFIG` VARIABLE IS `TRUE` OR CHANGES WILL NOT BE MADE).
 
 ## Other info:
