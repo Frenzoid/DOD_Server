@@ -30,15 +30,17 @@
 ## How Build a local Image (In case you dont have internet to pull the image from Docker-hub):
 - On a terminal with Docker, run: ```sudo docker build -t dod:latest ./```
 ## How to launch (From local Image or remote Docker-hub Image):
-- On a terminal with Docker: ```sudo docker run  -it -p 7777:7777 -p 7777:7777/udp -p 7778:7778 -p 7778:7778/udp -p 27016:27016 -p 27016:27016/udp -p 27015:27015/udp -p 27015:27015 -p 4380:4380/udp -p 80:80 -p 443:443 -e EULA=accept --name  DOD_SERVER xenium/dayofdragons```.
+1) On a terminal with Docker: ```sudo docker run  -it -p 7777:7777 -p 7777:7777/udp -p 7778:7778 -p 7778:7778/udp -p 27016:27016 -p 27016:27016/udp -p 27015:27015/udp -p 27015:27015 -p 4380:4380/udp -p 80:80 -p 443:443 -e EULA=accept --name  DOD_SERVER xenium/dayofdragons```.
   - -it: Interactive mode, attached to the terminal.
   - -p port specification.
   - -e env variable assignation.
   - --name name of the container.
   
-  Then, type `$LAUNCHSERVER`.
+2) Wait for the container to download the server files (you can check this on the logs).
+  
+3) Once the server is donwloaded, type `$LAUNCHSERVER`.
 
-- On a web pannel, with Portainer: Just make sure to set the proper variables before creating the container, join via remote console and type `$LAUNCHSERVER`.
+- On a web pannel, with Portainer: Just make sure to set the proper variables before creating the container, join via remote console, wait for the server to download, and type `$LAUNCHSERVER`.
 
 ## Configuration.
 By default, the game will generate an empty config file on `/home/steamsrv/dayofdragons_server/Dragons/Saved/Config/LinuxServer/Game.ini`, the container, at start, will automatically replace the config's fields with the env vars and paste it to `/home/steamsrv/predodconfig/Game.ini`, still, if you want to edit the file, to add more admins, etc.. just do the next steps:
