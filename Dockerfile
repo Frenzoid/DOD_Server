@@ -25,6 +25,7 @@ ENV UPDATECONFIG true
 ENV SERVERNAME 'Docker Powered DoD server!'
 
 ENV LAUNCHSERVER "/home/steamsrv/launchserver.sh"
+ENV STOPSERVER "kill -9 $(ps -aux | grep dragons | cut -d ' ' -f4 | head -n1)"
 
 EXPOSE ${WEBPORT}/tcp
 EXPOSE ${SSLPORT}/tcp
