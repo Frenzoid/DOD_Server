@@ -33,8 +33,8 @@ if [[ $EULA == "accept" || $EULA == "ACCEPT" || $EULA == "true" || $EULA == "TRU
       cp /home/steamsrv/predodconfig/Engine.ini /home/steamsrv/dayofdragons_server/Dragons/Saved/Config/LinuxServer/Engine.ini
   fi
 
-  # Starts the container console.
-  /bin/bash
+  # Starts the container console and the server.
+  /bin/bash & $LAUNCHSERVER
 
 else
     # If EULA was not accepted, show a message, and close the container.
