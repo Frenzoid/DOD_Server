@@ -23,7 +23,7 @@ Example: /invite InGameName#1234
 |/goto|PID|A|Teleports you to a player
 |/kill|PID|A|Kills a player|
 |/hamster|-----|A|Enables god mode.|
-|/superhino|-----|A|Disables god mode.|
+|/superrhino|-----|A|Disables god mode.|
 |/growself|-----|A|Grows yourselfs|
 |/healself|-----|A|Heals yourself|
 |/killself|-----|A|Kills yourself|
