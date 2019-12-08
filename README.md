@@ -5,7 +5,7 @@
 - This image can also be pulled from the [Docker-hub](https://hub.docker.com/repository/docker/xenium/dayofdragons/).
 
 ## Env vars:
-### Downloading, Installation and Configuration values.
+### Download, Installation and Configuration values.
 - ```EULA```: (STRING) Env variable to accept the EULA of this software, to do so, just set it to "accept" . Default: unset.
 - ```UPDATEGAME```: (BOOLEAN) Env variable that triggers the update / initial install of the server (done on container restart). Default: true.
 - ```UPDATECONFIG```: (BOOLEAN) Env variable that syncs the config of the server with the config env vars values (done on container restart). Default: true.
@@ -29,6 +29,7 @@
 
 ## How Build a local Image (In case you dont have internet to pull the image from Docker-hub):
 - On a terminal with Docker, run: ```sudo docker build -t dod:latest ./```
+
 ## How to launch (From local Image or remote Docker-hub Image):
 On a terminal with Docker: ```sudo docker run  -it -p 7777:7777 -p 7777:7777/udp -p 7778:7778 -p 7778:7778/udp -p 27016:27016 -p 27016:27016/udp -p 27015:27015/udp -p 27015:27015 -p 4380:4380/udp -p 80:80 -p 443:443 -e EULA=accept --name  DOD_SERVER xenium/dayofdragons```.
   - -it: Interactive mode, attached to the terminal.
