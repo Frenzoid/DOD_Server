@@ -43,7 +43,7 @@ On a web pannel, with Portainer: Just make sure to set the proper variables befo
 ## Configuration.
 By default, the game will generate an empty config file on `/home/steamsrv/dayofdragons_server/Dragons/Saved/Config/LinuxServer/Game.ini`, the container, at start, will automatically replace the config's fields with the env vars and paste it to `/home/steamsrv/predodconfig/Game.ini`, still, if you want to edit the file, to add more admins, etc.. just do the next steps:
 
-1) Stop the server, type `$STOPSERVER`.
+1) Stop the server, type `$STOPSERVER` in the container's console.
 
 2) Go to `/home/steamsrv/dayofdragons_server/Dragons/Saved/Config/LinuxServer/Game.ini` and edit the file, here's a template:
 
@@ -80,9 +80,9 @@ iAutoSaveInterval=300
 ```
 
 * Lines that start with `;` are comments, (configuration that the game will ignore).
-* If you can't find the file `Game.ini` on the folder, modify the tempalte, copy it, and restart the server.
+* If you can't find the file `Game.ini` on the folder, modify the template (`/home/steamsrv/predodconfig/Game.ini`), copy it, and start the server.
 
-3) Start the server, type `$LAUNCHSERVER`,
+3) Starting the server, type `$LAUNCHSERVER` in the container's console,
 
 ## Hosting multiple servers on same IP/machine
 Day of Dragons uses Unreal port 7777, and Steam Server Query Port 27016 by default. Additional servers hosted on the same IP will need their own installation folder and then you will need to change the Steam Query Port in the Engine.ini file.
@@ -100,8 +100,8 @@ GameServerQueryPort=27017
 GameServerQueryPort=27018
 GameServerQueryPort=27019
 
-4) Restart the container, and run `$LAUNCHSERVER`.
-(MAKE SURE THE `UPDATECONFIG` VARIABLE IS `TRUE` OR CHANGES WILL NOT BE MADE).
+4) Restart the container.
+(MAKE SURE THE `UPDATECONFIG` VARIABLE IS `TRUE` OR CHANGES WILL NOT BE APPLIED).
 
 ## Other info:
 - You can check the official server / client updates on the [OFFICIALUPDATES.md](https://github.com/Frenzoid/DayofDragons/blob/master/OFFICIALUPDATES.md) file, or on the official discord.
