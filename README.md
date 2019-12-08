@@ -56,8 +56,8 @@ iServerMaxPlayers=100
 
 ;This array config variable allows users to define who are admins. This must be set before the server is started. Add additional entries below the first.
 sServerAdmins=Steam64ID
-;ServerAdmins=Steam64ID
-;ServerAdmins=Steam64ID
+;sServerAdmins=Steam64ID
+;sServerAdmins=Steam64ID
 ;etc.
 
 ;This blacklist array config variable allows users to ban players by their Steam ID. Replace Steam64ID with the actual Steam ID of the banned player.
