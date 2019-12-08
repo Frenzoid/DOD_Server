@@ -1,3 +1,78 @@
+VERSION 0.7.2.6 
+
+```
+Requires server update
+
+NEW STUFF
+--Server Admins can now redacted any time they want
+--Players can now redacted but only one per server, lots of food when dead and must eat constantly
+
+CHANGED STUFF
+--Character now stays in the game for 5 minutes on disconnect or logout to give player time to reconnect (temporary until Server persistence is live)
+--Some Sound FX updated
+--Server optmization improvements to reduce lag
+--Adjusted biting hitboxes for all dragons
+--Growth times temporarily reduced until server persistence is out
+--Doubled food value for corpses
+--Clicking off chat now exits chat automatically
+--Escape menu can now be used when chat box active
+
+FIXED STUFF
+--Fixed bug where players were sometimes unable to hatch
+--Fixed infinite inferno sound loop on Fire Wyvern
+--Fixed the infamous broken chat bug
+--Fixed annoying chat text caret scrolling to end when editing text bug
+--Fixed breathing fire infiniloop after death
+--Fixed fire breathing dragons not falling over after death
+--Fixed corpses still growing after death which was creepy
+--Fixed a bug where pressing enter before hatching locked your inputs
+
+BROKEN STUFF
+--Server persistence
+```
+
+VERSION 0.7.2.2 Hotfix
+
+```
+Requires server update
+
+FIXED STUFF
+--Fixed a client crash
+--Small lag fix
+--New hatch prompt tooltip should no longer be permanent if hatching at exactly 10 seconds
+--Fix for hosted servers not being able to update through web app automatically
+
+BROKEN STUFF
+--Server persistence does not work currently
+--Hatching sometimes doesn't work
+--Chat box sometimes prevents tab switching or scrolling
+```
+
+VERSION 0.7.2.1 is now LIVE on Steam
+
+```
+Requires a Server Update
+
+NEW STUFF
+--Added Hatch Key Prompt after 10 seconds
+
+CHANGED STUFF
+--Added static corpses throughout the world players can eat, players will have to explore to find them (thermal vision)
+--Changed chat name colors (work in progress)
+--Lowered time needed to hold E to eat/drink to 2 seconds
+--Increased food/water detection range so its easier to eat/drink
+--Extended thermal vision range to 100m
+
+FIXED STUFF
+--Fixed a thermal vision bug
+--Fixed an eating/drinking bug
+
+BROKEN STUFF
+--Server persistence does not work currently
+--Hatching sometimes doesn't work
+--Chat box sometimes prevents tab switching or scrolling
+```
+
 VERSION 0.7.2.0 Update Now Live
 
 ```
