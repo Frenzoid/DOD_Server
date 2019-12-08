@@ -34,7 +34,7 @@ if [[ $EULA == "accept" || $EULA == "ACCEPT" || $EULA == "true" || $EULA == "TRU
   fi
 
   # Starts the container console and the server.
-  /bin/bash & $LAUNCHSERVER
+  $LAUNCHSERVER & /bin/bash
 
 else
     # If EULA was not accepted, show a message, and close the container.
