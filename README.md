@@ -61,18 +61,18 @@ sServerAdmins=Steam64ID
 ;etc.
 
 ;This blacklist array config variable allows users to ban players by their Steam ID. Replace Steam64ID with the actual Steam ID of the banned player.
-;ServerBanList=Steam64ID
-;ServerBanList=Steam64ID
-;ServerBanList=Steam64ID
+;sServerBanList=Steam64ID
+;sServerBanList=Steam64ID
+;sServerBanList=Steam64ID
 ;etc.
 
 ;Change this value to True if the server uses a whitelist
 bServerUseJoinList=false
 
 ;This whitelist array config variable allows users to prevent any player from joining their server unless their Steam ID is on this whitelist. Replace Steam64ID with the actual Steam ID of the allowed player. bServerUseJoinList=true must be set to enable the whitelist.
-;ServerJoinList=Steam64ID
-;ServerJoinList=Steam64ID
-;ServerJoinList=Steam64ID
+;sServerJoinList=Steam64ID
+;sServerJoinList=Steam64ID
+;sServerJoinList=Steam64ID
 ;etc.
 
 ;This variable determines the time between server autosaves in seconds, defaults to 300 seconds (5 minutes)
