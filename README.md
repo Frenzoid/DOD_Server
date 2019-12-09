@@ -19,7 +19,7 @@
 - ```MAXPLAYERS```: (STRING) Env variable that specifies the Max player slots for the server.
 - ```WHITELIST```: (BOOLEAN) Env variable that enables / disables whitelist mode. Default: false (disabled).
 - ```AUTOSAVESECONDS```: (STRING) Env variable that sets the automatic server save in seconds. Default 300 (Save each 5 minutes).
-- ```LAUNCHSERVER```: (executable command) command to start the server.
+- ```LAUNCHSERVER```: (executable command) command to start the server (wait until the server fully launched, and press ENTER to get back to the console).
 
 ## Paths (to bind volumes):
 - ```/home/steamsrv/```: Root folder.
