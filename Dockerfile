@@ -25,7 +25,7 @@ ENV UPDATECONFIG true
 ENV SERVERNAME '"Docker Powered DoD server!"'
 
 ENV LAUNCHSERVER "/home/steamsrv/launchserver.sh"
-ENV STOPSERVER "/bin/bash -c kill -9 `cat /home/steamsrv/dayofdragons_server/DragonsPid.txt`"
+ENV STOPSERVER "/home/steamsrv/stopserver.sh"
 
 EXPOSE ${WEBPORT}/tcp
 EXPOSE ${SSLPORT}/tcp
@@ -70,7 +70,9 @@ RUN mkdir -p /home/steamsrv/steamcmd /home/steamsrv/predodconfig/ && \
 	
 COPY entry-point.sh /home/steamsrv/steamcmd/entry-point.sh
 COPY launchserver.sh /home/steamsrv/launchserver.sh
+COPY stopserver.sh /home/steamsrv/stopserver.sh
 COPY Game.ini /home/steamsrv/predodconfig/Game.ini
 COPY Engine.ini /home/steamsrv/predodconfig/Engine.ini
+
 
 ENTRYPOINT ["/home/steamsrv/steamcmd/entry-point.sh"]
