@@ -39,7 +39,8 @@ On a terminal with Docker: ```sudo docker run -it -p 7777:7777 -p 7777:7777/udp 
   - -p port specification.
   - -e env variable assignation.
   - --name name of the container.
-  - (Have the servername in betwee double and normal quote marks, since the container parses the first ones as a full string): '"Server Name"'
+  - (Have the servername in between double and normal quote marks, since the container parses the first ones as a full string)
+  Example:  `-e SERVERNAME='"Your Server Name"'`
 
 On a web pannel, with Portainer: Just make sure to set the proper variables before creating the container.
 
