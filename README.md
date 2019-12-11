@@ -20,7 +20,7 @@
 - ```WHITELIST```: (BOOLEAN) Env variable that enables / disables whitelist mode. Default: false (disabled).
 - ```AUTOSAVESECONDS```: (STRING) Env variable that sets the automatic server save in seconds. Default 300 (Save each 5 minutes).
 ### Commands.
-- ```LAUNCHSERVER```: (executable command) command to start the server (`$LAUNCHSERVER`) (wait until the server fully launched, and press ENTER to get back to the console).
+- ```STARTSERVER```: (executable command) command to start the server (`$STARTSERVER`) (wait until the server fully launched, and press ENTER to get back to the console).
 - ```STOPSERVER```: (executable command) command to stop the server (`$STOPSERVER`), this command will stop the servers process without closing the container, allowing you to modify the config.
 
 ## Paths (to bind volumes):
@@ -85,7 +85,7 @@ iAutoSaveInterval=300
 * Lines that start with `;` are comments, (configuration that the game will ignore).
 * If you can't find the file `Game.ini` on the folder, modify the template (`/home/steamsrv/predodconfig/Game.ini`), copy it, and start the server.
 
-3) Starting the server, type `$LAUNCHSERVER` in the container's console,
+3) Starting the server, type `$STARTSERVER` in the container's console,
 
 ## Hosting multiple servers on same IP/machine
 Day of Dragons uses Unreal port 7777, and Steam Server Query Port 27016 by default. Additional servers hosted on the same IP will need their own installation folder and then you will need to change the Steam Query Port in the Engine.ini file.
