@@ -35,8 +35,8 @@ if [[ $EULA == "accept" || $EULA == "ACCEPT" || $EULA == "true" || $EULA == "TRU
 
   # Starts the container console and the server.
   echo "[[[[ LAUNCHING SERVER ]]]]"
-  /home/steamsrv/launchserver.sh
-  /bin/bash
+  bash /home/steamsrv/launchserver.sh
+  bash
 
 else
     # If EULA was not accepted, show a message, and close the container.
