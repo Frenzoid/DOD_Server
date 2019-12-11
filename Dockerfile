@@ -24,7 +24,7 @@ ENV ADMINSTEAMID 76561198051558283
 ENV UPDATECONFIG true
 ENV SERVERNAME '"Docker Powered DoD server!"'
 
-ENV LAUNCHSERVER "/home/steamsrv/launchserver.sh &"
+ENV STARTSERVER "/home/steamsrv/launchserver.sh &"
 ENV STOPSERVER "/home/steamsrv/stopserver.sh"
 
 EXPOSE ${WEBPORT}/tcp
