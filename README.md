@@ -1,5 +1,5 @@
 # Dragons over Docker! 
-# A Day of Dragons dedicated server Docker container.
+# A Day of Dragons dedicated server Docker image.
 ![dod logo](https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1088320/438449dd45a85b9285a9c2be55a7fcef5a3d3a4d.jpg)
 - This dockerfile will allow you to create an encapsuled docker container that runs a DoD game server.
 - This image can also be pulled from the [Docker-hub](https://hub.docker.com/repository/docker/xenium/dayofdragons/).
