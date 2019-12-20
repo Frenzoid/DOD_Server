@@ -1,3 +1,55 @@
+VERSION 0.7.3.2 Hotfix
+
+```
+Requires Server Update
+
+Fixed Stuff
+--Fixed players disappearing after eating a corpse
+--Toned down bite sounds until Simon tweaks them
+--Temporary fix for server filters
+--Found missing species sounds
+
+BROKEN STUFF
+--Server browser is only showing 1 server at a time in the listing, workaround is to use the server name filter to find the server you want until I fix it tomorrow. I'm tired.
+```
+
+VERSION 0.7.3.1 The "Server TLC" Update
+
+```
+Requires Server Update
+
+NEW STUFF
+--Added Server Persistence, player progress will now save on logout. All player progress is now stored in a local database on the server. Players who logout near non-groupies will remain in the game for 60s, players who logout in a safe area (no non-groupies) will logout and save immediately
+--Added Server Filters, you can now filter by server name, max results, official only, hide empty, hide full, sort by players, and sort by ping.
+--Added admin command /save to force a world save of all player data before restarting server.
+--Enabled Auto save interval in server config. iAutoSaveInterval=300 by default. (seconds between server autosaves) (refer to #resources server .zip download for config instructions)
+--Temporarily added Snow and a Christmas redacted in the redacted for the Holidays, but you have to find it!
+--New dragon bite sounds added
+--New dragon species sounds added
+--New pookie sounds added
+--All dragons now have 100% Gremlin Resistance, Gremlins, however, apply slow during threat, broadcast, whine, and cry vocalizations
+--Added /die command due to popular vote
+
+CHANGED STUFF
+--Official servers are now Red in server list
+--/stuck command now moves you farther away to better help people get unstuck
+--Pookie is no longer an underground vacuum
+--Pookie can now only be played once per session
+
+FIXED STUFF
+--Optimization pass on corpses, they shouldn't cause so much lag on the server
+--Admins should now be able to override server capacity
+--Session Banning players should now keep players from entering your server during session
+--Config banning players should now keep players from entering server
+--Whitelisting should now work properly
+--Fixed infi fire breath on Fire Wyvern if killed when breathing fire
+
+BROKEN STUFF
+--Do not carry hatchlings through portals
+--Server Filters may not all work and still need tested 
+Merry Christmas!
+```
+
 VERSION 0.7.2.6 
 
 ```
