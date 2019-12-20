@@ -26,13 +26,13 @@ Example: /invite InGameName#1234
 |/superrhino|-----|A|Disables god mode.|
 |/growself|-----|A|Grows yourselfs|
 |/healself|-----|A|Heals yourself|
-|/killself|-----|A|Kills yourself|
 |/grow|PID|A|Grows a player|
 |/boot|PID|A|Kicks a player off the serrver|
 |/ban|PID|A|Bans a player (kicked until next server restart)|
 |/unbban|PID|A|Unbans a player that has been banned before|
 |/pid|-----|U|Shows your player ID| 
 |/loc|-----|U|Shows your coordinates|
+|/die|-----|U|Kills yourself|
 |/stuck|-----|U|Gets you unstuck off structures|
 |/growth|-----|U|Shows your growth progress|
 |/gender|-----|U|Shows your gender|
