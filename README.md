@@ -1,3 +1,13 @@
+
+# UNMAINTAINED!!
+
+This docker image is now deprecated because I stopped maintaining it, this is due to certain internal issues with the company at the time.
+Still, this is an opensource project, if you manage to fix it and create a PR, i'll gladly merge it.
+
+Best regards, -Frenoid.
+
+
+
 # Dragons over Docker! 
 # A Day of Dragons dedicated server Docker image.
 ![dod logo](https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1088320/438449dd45a85b9285a9c2be55a7fcef5a3d3a4d.jpg)
